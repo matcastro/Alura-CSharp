@@ -10,8 +10,15 @@ namespace Classes
     {
         static void Main(string[] args)
         {
-            new ContaCorrente();
+            ContaCorrente primeiraContaCorrente = new ContaCorrente();
+            primeiraContaCorrente.saldo = 200;
+            Console.WriteLine(primeiraContaCorrente.saldo);
+            primeiraContaCorrente.saldo += 100;
+            Console.WriteLine(primeiraContaCorrente.saldo);
 
+            ContaCorrente segundaContaCorrente = new ContaCorrente();
+            segundaContaCorrente.saldo = 50;
+            Console.WriteLine(segundaContaCorrente.saldo);
             Console.ReadLine();
         }
     }
