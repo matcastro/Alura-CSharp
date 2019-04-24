@@ -11,22 +11,24 @@ namespace Classes
         static void Main(string[] args)
         {
             ContaCorrente contaMateus = new ContaCorrente();
-            contaMateus.titular = new Cliente();
-            contaMateus.titular.nome = "Nome Teste";
-            contaMateus.titular.cpf = "12345678910";
-            contaMateus.titular.profissao = "Pedreiro";
-            contaMateus.numero = 1;
+            contaMateus.Titular = new Cliente();
+            contaMateus.Titular.Nome = "Nome Teste";
+            contaMateus.Titular.CPF = "12345678910";
+            contaMateus.Titular.Profissao = "Pedreiro";
+            contaMateus.Numero = 1;
             contaMateus.Depositar(10);
-            contaMateus.agencia = 1;
+            contaMateus.Agencia = 1;
 
-            Console.WriteLine(contaMateus.titular);
-            Console.WriteLine(contaMateus.titular.nome);
-            Console.WriteLine(contaMateus.titular.cpf);
-            Console.WriteLine(contaMateus.titular.profissao);
-            Console.WriteLine(contaMateus.agencia);
-            Console.WriteLine(contaMateus.numero);
-            Console.WriteLine(contaMateus.saldo);
+            Console.WriteLine(contaMateus.Titular);
+            Console.WriteLine(contaMateus.Titular.Nome);
+            Console.WriteLine(contaMateus.Titular.CPF);
+            Console.WriteLine(contaMateus.Titular.Profissao);
+            Console.WriteLine(contaMateus.Agencia);
+            Console.WriteLine(contaMateus.Numero);
+            Console.WriteLine(contaMateus.Saldo);
 
+            contaMateus.Sacar(10);
+            Console.WriteLine(contaMateus.Saldo);
             Console.ReadLine();
         }
     }
