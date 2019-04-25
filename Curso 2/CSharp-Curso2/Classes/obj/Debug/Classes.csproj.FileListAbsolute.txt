@@ -1,0 +1,7 @@
+C:\git\Alura-CSharp\Curso 2\CSharp-Curso2\Classes\bin\Debug\Classes.exe.config
+C:\git\Alura-CSharp\Curso 2\CSharp-Curso2\Classes\bin\Debug\Classes.exe
+C:\git\Alura-CSharp\Curso 2\CSharp-Curso2\Classes\bin\Debug\Classes.pdb
+C:\git\Alura-CSharp\Curso 2\CSharp-Curso2\Classes\obj\Debug\Classes.csprojAssemblyReference.cache
+C:\git\Alura-CSharp\Curso 2\CSharp-Curso2\Classes\obj\Debug\Classes.csproj.CoreCompileInputs.cache
+C:\git\Alura-CSharp\Curso 2\CSharp-Curso2\Classes\obj\Debug\Classes.exe
+C:\git\Alura-CSharp\Curso 2\CSharp-Curso2\Classes\obj\Debug\Classes.pdb
