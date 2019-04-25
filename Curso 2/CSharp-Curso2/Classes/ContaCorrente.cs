@@ -28,6 +28,16 @@ namespace Classes
             }
         }
 
+        public static int TotalDeContasCriadas { get; private set; }
+
+        public ContaCorrente(int agencia, int numero)
+        {
+            Agencia = agencia;
+            Numero = numero;
+
+            TotalDeContasCriadas++;
+        }
+
         public void Depositar(double valor)
         {
             if (valor > 0)
