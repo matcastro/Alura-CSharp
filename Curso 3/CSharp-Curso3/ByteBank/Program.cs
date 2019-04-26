@@ -1,4 +1,5 @@
 ﻿using ByteBank.Funcionarios;
+using ByteBank.Sistemas;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,8 +16,13 @@ namespace ByteBank
             Funcionario carlos = new Desenvolvedor("123.456.789-10");
             carlos.Nome = "Carlos";
 
-            Funcionario roberta = new Diretor("109.876.543-21");
+            Diretor roberta = new Diretor("109.876.543-21");
             roberta.Nome = "Roberta";
+            roberta.Senha = "111";
+
+            SistemaInterno sistema = new SistemaInterno();
+            sistema.Logar(roberta, "112");
+            sistema.Logar(roberta, "111");
 
             gerenciador.Registrar(carlos);
             gerenciador.Registrar(roberta);
