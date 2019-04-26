@@ -20,7 +20,11 @@ namespace ByteBank
             roberta.Nome = "Roberta";
             roberta.Senha = "111";
 
+            ParceiroComercial parceiro = new ParceiroComercial();
+            parceiro.Senha = "000";
+
             SistemaInterno sistema = new SistemaInterno();
+            sistema.Logar(parceiro, "000");
             sistema.Logar(roberta, "112");
             sistema.Logar(roberta, "111");
 
