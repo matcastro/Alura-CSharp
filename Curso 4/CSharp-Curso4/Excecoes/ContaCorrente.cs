@@ -29,10 +29,11 @@ namespace Excecoes
         }
 
         public static int TotalDeContasCriadas { get; private set; }
+        public static int TaxaOperacao { get; private set; }
 
         public ContaCorrente(int agencia, int numero)
         {
-            if(agencia <= 0)
+            if (agencia <= 0)
             {
                 throw new ArgumentException("O argumento " + nameof(agencia) + " deve ser maior que zero!", nameof(agencia));
             }
@@ -46,6 +47,7 @@ namespace Excecoes
             Numero = numero;
 
             TotalDeContasCriadas++;
+            TaxaOperacao = 30 / TotalDeContasCriadas;
         }
 
         public void Depositar(double valor)
@@ -56,24 +58,26 @@ namespace Excecoes
             }
         }
 
-        public bool Sacar(double valor)
+        public void Sacar(double valor)
         {
-            if (_saldo < valor || valor <= 0)
-                return false;
+            if (valor < 0)
+            {
+                throw new ArgumentException("Valor do saque não pode ser negativo!", nameof(valor));
+            }
+            if (_saldo < valor)
+                throw new SaldoInsuficienteException(_saldo, valor);
 
             _saldo -= valor;
-            return true;
         }
 
-        public bool Transferir(double valor, ContaCorrente contaDestino)
+        public void Transferir(double valor, ContaCorrente contaDestino)
         {
-            bool resultadoDoSaque = this.Sacar(valor);
-            if (!resultadoDoSaque)
-                return false;
-
+            if (valor < 0)
+            {
+                throw new ArgumentException("Valor do saque não pode ser negativo!", nameof(valor));
+            }
+            Sacar(valor);
             contaDestino.Depositar(valor);
-
-            return true;
         }
     }
 }

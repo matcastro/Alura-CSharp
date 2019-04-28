@@ -12,12 +12,20 @@ namespace Excecoes
         {
             try
             {
-                ContaCorrente conta = new ContaCorrente(0, 0);
+                ContaCorrente conta = new ContaCorrente(1, 254162);
+                conta.Depositar(100);
+                conta.Sacar(50);
+                //conta.Sacar(500);
+                conta.Sacar(-50);
             }
             catch(ArgumentException e)
             {
                 Console.WriteLine(e.Message);
                 Console.WriteLine(e.ParamName);
+            }
+            catch(SaldoInsuficienteException e)
+            {
+                Console.WriteLine(e.Message);
             }
             //try
             //{
