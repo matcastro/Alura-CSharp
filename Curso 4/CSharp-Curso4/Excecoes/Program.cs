@@ -12,21 +12,39 @@ namespace Excecoes
         {
             try
             {
-                ContaCorrente conta = new ContaCorrente(1, 254162);
-                conta.Depositar(100);
-                conta.Sacar(50);
-                //conta.Sacar(500);
-                conta.Sacar(-50);
+                ContaCorrente conta1 = new ContaCorrente(4564, 789684);
+                ContaCorrente conta2 = new ContaCorrente(7891, 456794);
+
+                conta1.Transferir(10000, conta2);
+                //conta1.Sacar(10000);
             }
-            catch(ArgumentException e)
+            catch (OperacaoFinanceiraException e)
             {
                 Console.WriteLine(e.Message);
-                Console.WriteLine(e.ParamName);
+                Console.WriteLine(e.StackTrace);
+
+                Console.WriteLine("Informações da INNER EXCEPTION (exceção interna):");
+
+                Console.WriteLine(e.InnerException.Message);
+                Console.WriteLine(e.InnerException.StackTrace);
             }
-            catch(SaldoInsuficienteException e)
-            {
-                Console.WriteLine(e.Message);
-            }
+            //try
+            //{
+            //    ContaCorrente conta = new ContaCorrente(1, 254162);
+            //    conta.Depositar(100);
+            //    conta.Sacar(50);
+            //    //conta.Sacar(500);
+            //    conta.Sacar(-50);
+            //}
+            //catch(ArgumentException e)
+            //{
+            //    Console.WriteLine(e.Message);
+            //    Console.WriteLine(e.ParamName);
+            //}
+            //catch(SaldoInsuficienteException e)
+            //{
+            //    Console.WriteLine(e.Message);
+            //}
             //try
             //{
             //    Metodo();
@@ -61,7 +79,7 @@ namespace Excecoes
             {
                 return numero / divisor;
             }
-            catch(Exception)
+            catch (Exception)
             {
                 Console.WriteLine("Exceção com numero=" + numero + " e divisor=" + divisor);
                 throw;

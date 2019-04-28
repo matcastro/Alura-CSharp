@@ -28,6 +28,9 @@ namespace Excecoes
             }
         }
 
+        public int ContadorSaquesNaoPermitidos { get; private set; }
+        public int ContadorTransferenciasNaoPermitidos { get; private set; }
+
         public static int TotalDeContasCriadas { get; private set; }
         public static int TaxaOperacao { get; private set; }
 
@@ -65,7 +68,10 @@ namespace Excecoes
                 throw new ArgumentException("Valor do saque não pode ser negativo!", nameof(valor));
             }
             if (_saldo < valor)
+            {
+                ContadorSaquesNaoPermitidos++;
                 throw new SaldoInsuficienteException(_saldo, valor);
+            }
 
             _saldo -= valor;
         }
@@ -76,7 +82,15 @@ namespace Excecoes
             {
                 throw new ArgumentException("Valor do saque não pode ser negativo!", nameof(valor));
             }
-            Sacar(valor);
+            try
+            {
+                Sacar(valor);
+            }
+            catch(SaldoInsuficienteException e)
+            {
+                ContadorTransferenciasNaoPermitidos++;
+                throw new OperacaoFinanceiraException("Operação não realizada.", e);
+            }
             contaDestino.Depositar(valor);
         }
     }
