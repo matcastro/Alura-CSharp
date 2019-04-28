@@ -12,17 +12,26 @@ namespace Excecoes
         {
             try
             {
-                Metodo();
+                ContaCorrente conta = new ContaCorrente(0, 0);
             }
-            catch (DivideByZeroException e)
-            {
-                Console.WriteLine("Não é possível divisão por 0!");
-            }
-            catch (Exception e)
+            catch(ArgumentException e)
             {
                 Console.WriteLine(e.Message);
-                Console.WriteLine(e.StackTrace);
+                Console.WriteLine(e.ParamName);
             }
+            //try
+            //{
+            //    Metodo();
+            //}
+            //catch (DivideByZeroException e)
+            //{
+            //    Console.WriteLine("Não é possível divisão por 0!");
+            //}
+            //catch (Exception e)
+            //{
+            //    Console.WriteLine(e.Message);
+            //    Console.WriteLine(e.StackTrace);
+            //}
             Console.ReadLine();
         }
 

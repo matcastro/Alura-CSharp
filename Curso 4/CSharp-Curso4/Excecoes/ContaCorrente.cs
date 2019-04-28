@@ -10,8 +10,8 @@ namespace Excecoes
     {
         private double _saldo;
         public Cliente Titular { get; set; }
-        public int Agencia { get; set; }
-        public int Numero { get; set; }
+        public int Agencia { get; }
+        public int Numero { get; }
         public double Saldo
         {
             get
@@ -32,6 +32,16 @@ namespace Excecoes
 
         public ContaCorrente(int agencia, int numero)
         {
+            if(agencia <= 0)
+            {
+                throw new ArgumentException("O argumento " + nameof(agencia) + " deve ser maior que zero!", nameof(agencia));
+            }
+
+            if (numero <= 0)
+            {
+                throw new ArgumentException("O argumento " + nameof(numero) + " deve ser maior que zero!", nameof(numero));
+            }
+
             Agencia = agencia;
             Numero = numero;
 
