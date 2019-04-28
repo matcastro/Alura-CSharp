@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,6 +10,47 @@ namespace Excecoes
     class Program
     {
         static void Main(string[] args)
+        {
+            try
+            {
+                CarregarContas();
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("CATCH NA MAIN");
+            }
+            Console.ReadLine();
+        }
+
+        private static void CarregarContas()
+        {
+            using (LeitorDeArquivo leitor = new LeitorDeArquivo("contas.txt"))
+            {
+                leitor.LerProximaLinha();
+                leitor.LerProximaLinha();
+                leitor.LerProximaLinha();
+            }
+            //LeitorDeArquivo leitor = null;
+            //try
+            //{
+            //    leitor = new LeitorDeArquivo("contas.txt");
+
+            //    leitor.LerProximaLinha();
+            //    leitor.LerProximaLinha();
+            //    leitor.LerProximaLinha();
+            //}
+            //catch (IOException)
+            //{
+            //    Console.WriteLine("Exceção do tipo IOException capturada e tratada.");
+            //}
+            //finally
+            //{
+            //    if (leitor != null)
+            //        leitor.Fechar();
+            //}
+        }
+
+        private static void TestaOperacaoFinanceira()
         {
             try
             {
@@ -28,37 +70,6 @@ namespace Excecoes
                 Console.WriteLine(e.InnerException.Message);
                 Console.WriteLine(e.InnerException.StackTrace);
             }
-            //try
-            //{
-            //    ContaCorrente conta = new ContaCorrente(1, 254162);
-            //    conta.Depositar(100);
-            //    conta.Sacar(50);
-            //    //conta.Sacar(500);
-            //    conta.Sacar(-50);
-            //}
-            //catch(ArgumentException e)
-            //{
-            //    Console.WriteLine(e.Message);
-            //    Console.WriteLine(e.ParamName);
-            //}
-            //catch(SaldoInsuficienteException e)
-            //{
-            //    Console.WriteLine(e.Message);
-            //}
-            //try
-            //{
-            //    Metodo();
-            //}
-            //catch (DivideByZeroException e)
-            //{
-            //    Console.WriteLine("Não é possível divisão por 0!");
-            //}
-            //catch (Exception e)
-            //{
-            //    Console.WriteLine(e.Message);
-            //    Console.WriteLine(e.StackTrace);
-            //}
-            Console.ReadLine();
         }
 
         static void Metodo()
