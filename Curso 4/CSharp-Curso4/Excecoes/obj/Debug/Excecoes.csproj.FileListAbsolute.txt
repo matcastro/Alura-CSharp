@@ -1,0 +1,7 @@
+C:\git\Alura-CSharp\Curso 4\CSharp-Curso4\Excecoes\bin\Debug\Excecoes.exe.config
+C:\git\Alura-CSharp\Curso 4\CSharp-Curso4\Excecoes\bin\Debug\Excecoes.exe
+C:\git\Alura-CSharp\Curso 4\CSharp-Curso4\Excecoes\bin\Debug\Excecoes.pdb
+C:\git\Alura-CSharp\Curso 4\CSharp-Curso4\Excecoes\obj\Debug\Excecoes.csprojAssemblyReference.cache
+C:\git\Alura-CSharp\Curso 4\CSharp-Curso4\Excecoes\obj\Debug\Excecoes.csproj.CoreCompileInputs.cache
+C:\git\Alura-CSharp\Curso 4\CSharp-Curso4\Excecoes\obj\Debug\Excecoes.exe
+C:\git\Alura-CSharp\Curso 4\CSharp-Curso4\Excecoes\obj\Debug\Excecoes.pdb
