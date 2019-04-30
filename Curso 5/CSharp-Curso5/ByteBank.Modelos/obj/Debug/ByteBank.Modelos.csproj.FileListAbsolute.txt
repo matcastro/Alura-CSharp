@@ -1,0 +1,6 @@
+C:\git\Alura-CSharp\Curso 5\CSharp-Curso5\ByteBank.Modelos\obj\Debug\ByteBank.Modelos.csprojAssemblyReference.cache
+C:\git\Alura-CSharp\Curso 5\CSharp-Curso5\ByteBank.Modelos\obj\Debug\ByteBank.Modelos.csproj.CoreCompileInputs.cache
+C:\git\Alura-CSharp\Curso 5\CSharp-Curso5\ByteBank.Modelos\bin\Debug\ByteBank.Modelos.dll
+C:\git\Alura-CSharp\Curso 5\CSharp-Curso5\ByteBank.Modelos\bin\Debug\ByteBank.Modelos.pdb
+C:\git\Alura-CSharp\Curso 5\CSharp-Curso5\ByteBank.Modelos\obj\Debug\ByteBank.Modelos.dll
+C:\git\Alura-CSharp\Curso 5\CSharp-Curso5\ByteBank.Modelos\obj\Debug\ByteBank.Modelos.pdb
