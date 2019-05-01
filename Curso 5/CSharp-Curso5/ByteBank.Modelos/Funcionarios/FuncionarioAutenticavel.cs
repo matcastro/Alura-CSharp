@@ -8,6 +8,7 @@ namespace ByteBank.Modelos.Funcionarios
 {
     public abstract class FuncionarioAutenticavel : Funcionario, IAutenticavel
     {
+        private AutenticacaoHelper _autenticacaoHelper = new AutenticacaoHelper();
         public string Senha { get; set; }
 
         public FuncionarioAutenticavel(double salario, string cpf)
@@ -17,7 +18,7 @@ namespace ByteBank.Modelos.Funcionarios
 
         public bool Autenticar(string senha)
         {
-            return Senha == senha;
+            return _autenticacaoHelper.CompararSenha(Senha, senha);
         }
     }
 }

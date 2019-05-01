@@ -1,4 +1,5 @@
 ﻿using ByteBank.Modelos;
+using ByteBank.Modelos.Funcionarios;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,8 +12,10 @@ namespace ByteBank.SistemaAgencia
     {
         static void Main(string[] args)
         {
-            ContaCorrente conta = new ContaCorrente(2156, 348646);
-            Console.WriteLine(conta.Saldo);
+            GerenteDeConta gerente = new GerenteDeConta("1235651");
+            gerente.Senha = "123";
+            Console.WriteLine(gerente.Autenticar("123"));
+            Console.WriteLine(gerente.Autenticar("12"));
 
             Console.ReadLine();
         }
