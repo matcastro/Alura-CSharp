@@ -1,5 +1,7 @@
 ﻿using ByteBank.Modelos;
 using ByteBank.Modelos.Funcionarios;
+using Humanizer;
+using Humanizer.Localisation;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,13 +14,15 @@ namespace ByteBank.SistemaAgencia
     {
         static void Main(string[] args)
         {
-            GerenteDeConta gerente = new GerenteDeConta("1235651");
-            gerente.Senha = "123";
+            DateTime dataPagamento = new DateTime(2019, 5, 2);
+            DateTime dataCorrente = DateTime.Now;
 
-            ContaCorrente conta = new ContaCorrente(32, 55);
-            conta.Sacar(20);
-            Console.WriteLine(gerente.Autenticar("123"));
-            Console.WriteLine(gerente.Autenticar("12"));
+            Console.WriteLine(dataPagamento);
+            Console.WriteLine(dataCorrente);
+
+            TimeSpan diferenca = dataPagamento - dataCorrente;
+
+            Console.WriteLine("Diferença de " + TimeSpanHumanizeExtensions.Humanize(diferenca, maxUnit:TimeUnit.Year));
 
             Console.ReadLine();
         }
