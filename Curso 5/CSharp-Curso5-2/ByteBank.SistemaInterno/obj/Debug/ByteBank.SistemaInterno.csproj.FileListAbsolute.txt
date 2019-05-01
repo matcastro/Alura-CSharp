@@ -7,3 +7,4 @@ C:\git\Alura-CSharp\Curso 5\CSharp-Curso5-2\ByteBank.SistemaInterno\obj\Debug\By
 C:\git\Alura-CSharp\Curso 5\CSharp-Curso5-2\ByteBank.SistemaInterno\obj\Debug\ByteBank.SistemaInterno.csproj.CopyComplete
 C:\git\Alura-CSharp\Curso 5\CSharp-Curso5-2\ByteBank.SistemaInterno\obj\Debug\ByteBank.SistemaInterno.exe
 C:\git\Alura-CSharp\Curso 5\CSharp-Curso5-2\ByteBank.SistemaInterno\obj\Debug\ByteBank.SistemaInterno.pdb
+C:\git\Alura-CSharp\Curso 5\CSharp-Curso5-2\ByteBank.SistemaInterno\bin\Debug\ByteBank.Modelos.xml
