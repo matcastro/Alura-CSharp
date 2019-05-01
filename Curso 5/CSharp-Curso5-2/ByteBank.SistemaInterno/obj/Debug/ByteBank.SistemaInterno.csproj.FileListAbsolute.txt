@@ -1,0 +1,9 @@
+C:\git\Alura-CSharp\Curso 5\CSharp-Curso5-2\ByteBank.SistemaInterno\bin\Debug\ByteBank.SistemaInterno.exe.config
+C:\git\Alura-CSharp\Curso 5\CSharp-Curso5-2\ByteBank.SistemaInterno\bin\Debug\ByteBank.SistemaInterno.exe
+C:\git\Alura-CSharp\Curso 5\CSharp-Curso5-2\ByteBank.SistemaInterno\bin\Debug\ByteBank.SistemaInterno.pdb
+C:\git\Alura-CSharp\Curso 5\CSharp-Curso5-2\ByteBank.SistemaInterno\bin\Debug\ByteBank.Modelos.dll
+C:\git\Alura-CSharp\Curso 5\CSharp-Curso5-2\ByteBank.SistemaInterno\obj\Debug\ByteBank.SistemaInterno.csprojAssemblyReference.cache
+C:\git\Alura-CSharp\Curso 5\CSharp-Curso5-2\ByteBank.SistemaInterno\obj\Debug\ByteBank.SistemaInterno.csproj.CoreCompileInputs.cache
+C:\git\Alura-CSharp\Curso 5\CSharp-Curso5-2\ByteBank.SistemaInterno\obj\Debug\ByteBank.SistemaInterno.csproj.CopyComplete
+C:\git\Alura-CSharp\Curso 5\CSharp-Curso5-2\ByteBank.SistemaInterno\obj\Debug\ByteBank.SistemaInterno.exe
+C:\git\Alura-CSharp\Curso 5\CSharp-Curso5-2\ByteBank.SistemaInterno\obj\Debug\ByteBank.SistemaInterno.pdb
