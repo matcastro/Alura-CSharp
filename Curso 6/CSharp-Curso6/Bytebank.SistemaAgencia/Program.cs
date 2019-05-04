@@ -10,10 +10,13 @@ namespace Bytebank.SistemaAgencia
     {
         static void Main(string[] args)
         {
-            string url = "pagina?argumentos";
-            Console.WriteLine(url);
-            url = url.Substring(url.IndexOf("?") + 1);
-            Console.WriteLine(url);
+            string url = "pagina?moedaOrigem=real&moedaDestino=dolar";
+
+            ExtratorValorDeArgumentosURL extrator = new ExtratorValorDeArgumentosURL(url);
+            string moedaDestino = extrator.GetValor("moedaDestino");
+            Console.WriteLine(moedaDestino);
+
+
             Console.ReadLine();
         }
     }
