@@ -1,0 +1,10 @@
+C:\git\Alura-CSharp\Curso 6\CSharp-Curso6\Bytebank.SistemaAgencia\bin\Debug\Bytebank.SistemaAgencia.exe.config
+C:\git\Alura-CSharp\Curso 6\CSharp-Curso6\Bytebank.SistemaAgencia\bin\Debug\Bytebank.SistemaAgencia.exe
+C:\git\Alura-CSharp\Curso 6\CSharp-Curso6\Bytebank.SistemaAgencia\bin\Debug\Bytebank.SistemaAgencia.pdb
+C:\git\Alura-CSharp\Curso 6\CSharp-Curso6\Bytebank.SistemaAgencia\obj\Debug\Bytebank.SistemaAgencia.csprojAssemblyReference.cache
+C:\git\Alura-CSharp\Curso 6\CSharp-Curso6\Bytebank.SistemaAgencia\obj\Debug\Bytebank.SistemaAgencia.csproj.CoreCompileInputs.cache
+C:\git\Alura-CSharp\Curso 6\CSharp-Curso6\Bytebank.SistemaAgencia\obj\Debug\Bytebank.SistemaAgencia.exe
+C:\git\Alura-CSharp\Curso 6\CSharp-Curso6\Bytebank.SistemaAgencia\obj\Debug\Bytebank.SistemaAgencia.pdb
+C:\git\Alura-CSharp\Curso 6\CSharp-Curso6\Bytebank.SistemaAgencia\bin\Debug\ByteBank.Modelos.dll
+C:\git\Alura-CSharp\Curso 6\CSharp-Curso6\Bytebank.SistemaAgencia\bin\Debug\ByteBank.Modelos.pdb
+C:\git\Alura-CSharp\Curso 6\CSharp-Curso6\Bytebank.SistemaAgencia\obj\Debug\Bytebank.SistemaAgencia.csproj.CopyComplete
