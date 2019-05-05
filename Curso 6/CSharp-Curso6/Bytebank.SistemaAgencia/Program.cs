@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ByteBank.Modelos;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,9 +13,26 @@ namespace Bytebank.SistemaAgencia
         readonly static string padraoTelefone = "[0-9]{4,5}[- ]?[0-9]{4}";
         static void Main(string[] args)
         {
-            Console.WriteLine(RecuperarTelefoneDeTexto("Meu número é: 23423453"));
-            Console.ReadLine();
+            ContaCorrente conta = new ContaCorrente(123, 12345);
+            Console.WriteLine(conta);
 
+            Cliente carlos = new Cliente();
+            carlos.CPF = "123.456.789-10";
+            carlos.Nome = "Carlos";
+            carlos.Profissao = "Programador";
+
+            Cliente carlos2 = new Cliente();
+            carlos2.CPF = "123.456.789-10";
+            carlos2.Nome = "Carlos";
+            carlos2.Profissao = "Programador";
+
+            Console.WriteLine(carlos.Equals(carlos2));
+
+            Console.ReadLine();
+        }
+
+        static void TestaString()
+        {
             string url = "pagina?moedaOrigem=real&moedaDestino=dolar&valor=1500";
 
             ExtratorValorDeArgumentosURL extrator = new ExtratorValorDeArgumentosURL(url);
@@ -24,8 +42,11 @@ namespace Bytebank.SistemaAgencia
             Console.WriteLine(moedaDestino);
             Console.WriteLine(moedaOrigem);
             Console.WriteLine(valor);
+        }
 
-            Console.ReadLine();
+        static void TestaRegex()
+        {
+            Console.WriteLine(RecuperarTelefoneDeTexto("Meu número é: 23423453"));
         }
 
         static string RecuperarTelefoneDeTexto(string texto)
