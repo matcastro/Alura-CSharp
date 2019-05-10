@@ -11,25 +11,30 @@ namespace ByteBank
         static void Main(string[] args)
         {
             ListaDeContaCorrente lista = new ListaDeContaCorrente(2);
+            lista.imprimeLista();
 
             lista.Adicionar(new ContaCorrente(1, 123));
             lista.Adicionar(new ContaCorrente(1, 456));
             lista.Adicionar(new ContaCorrente(1, 789));
             lista.Adicionar(new ContaCorrente(2, 123));
             lista.Adicionar(new ContaCorrente(2, 456));
-            lista.Adicionar(new ContaCorrente(2, 789));
-            lista.Adicionar(new ContaCorrente(1, 123));
-            lista.Adicionar(new ContaCorrente(1, 456));
-            lista.Adicionar(new ContaCorrente(1, 789));
-            lista.Adicionar(new ContaCorrente(2, 123));
-            lista.Adicionar(new ContaCorrente(2, 456));
-            lista.Adicionar(new ContaCorrente(2, 789));
-            lista.Adicionar(new ContaCorrente(1, 123));
-            lista.Adicionar(new ContaCorrente(1, 456));
-            lista.Adicionar(new ContaCorrente(1, 789));
-            lista.Adicionar(new ContaCorrente(2, 123));
-            lista.Adicionar(new ContaCorrente(2, 456));
-            lista.Adicionar(new ContaCorrente(2, 789));
+
+            lista.imprimeLista();
+            lista.Remover(new ContaCorrente(1, 456));
+            lista.imprimeLista();
+            //lista.Adicionar(new ContaCorrente(2, 789));
+            //lista.Adicionar(new ContaCorrente(1, 123));
+            //lista.Adicionar(new ContaCorrente(1, 456));
+            //lista.Adicionar(new ContaCorrente(1, 789));
+            //lista.Adicionar(new ContaCorrente(2, 123));
+            //lista.Adicionar(new ContaCorrente(2, 456));
+            //lista.Adicionar(new ContaCorrente(2, 789));
+            //lista.Adicionar(new ContaCorrente(1, 123));
+            //lista.Adicionar(new ContaCorrente(1, 456));
+            //lista.Adicionar(new ContaCorrente(1, 789));
+            //lista.Adicionar(new ContaCorrente(2, 123));
+            //lista.Adicionar(new ContaCorrente(2, 456));
+            //lista.Adicionar(new ContaCorrente(2, 789));
 
             Console.ReadLine();
         }

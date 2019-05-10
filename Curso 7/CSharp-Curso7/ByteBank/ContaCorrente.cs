@@ -116,5 +116,15 @@ namespace ByteBank
         {
             return $"Agência {Agencia}, Número {Numero}, Saldo {Saldo}";
         }
+
+        public override bool Equals(object obj)
+        {
+            ContaCorrente conta = obj as ContaCorrente;
+
+            if (conta == null)
+                return false;
+
+            return conta.Agencia == Agencia && conta.Numero == Numero;
+        }
     }
 }

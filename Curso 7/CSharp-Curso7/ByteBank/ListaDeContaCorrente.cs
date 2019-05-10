@@ -20,12 +20,46 @@ namespace ByteBank
         public void Adicionar(ContaCorrente item)
         {
             VerificarCapacidade(_proximaPosicao + 1);
-            Console.WriteLine($"Adicionando no índice {_proximaPosicao} conta {item.Agencia}/{item.Numero}");
+            //Console.WriteLine($"Adicionando no índice {_proximaPosicao} conta {item.Agencia}/{item.Numero}");
 
             if (_proximaPosicao <= _itens.Length)
             {
                 _itens[_proximaPosicao] = item;
                 _proximaPosicao++;
+            }
+        }
+
+        public void Remover(ContaCorrente item)
+        {
+            int indiceItem = -1;
+
+            for (int i = 0; i < _proximaPosicao; i++)
+            {
+                if (item.Equals(_itens[i]))
+                {
+                    indiceItem = i;
+                    break;
+                }
+            }
+            if (indiceItem > -1)
+            {
+                for (int i = indiceItem; i < _proximaPosicao-1; i++)
+                {
+                    _itens[i] = _itens[i + 1];
+                }
+
+                _proximaPosicao--;
+                _itens[_proximaPosicao] = null;
+            }
+
+        }
+
+        public void imprimeLista()
+        {
+            Console.WriteLine();
+            for (int i = 0; i < _proximaPosicao; i++)
+            {
+                Console.WriteLine($"{_itens[i]}");
             }
         }
 
