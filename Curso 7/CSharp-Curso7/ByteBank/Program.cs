@@ -11,30 +11,22 @@ namespace ByteBank
         static void Main(string[] args)
         {
             ListaDeContaCorrente lista = new ListaDeContaCorrente(2);
-            lista.imprimeLista();
 
-            lista.Adicionar(new ContaCorrente(1, 123));
-            lista.Adicionar(new ContaCorrente(1, 456));
-            lista.Adicionar(new ContaCorrente(1, 789));
-            lista.Adicionar(new ContaCorrente(2, 123));
-            lista.Adicionar(new ContaCorrente(2, 456));
+            lista.AdicionarVarios(
+                new ContaCorrente(1, 123),
+                new ContaCorrente(1, 456),
+                new ContaCorrente(1, 789),
+                new ContaCorrente(2, 123),
+                new ContaCorrente(2, 456)
+            );
+            ContaCorrente conta = lista[3];
+            
+            lista.Remover(conta);
 
-            lista.imprimeLista();
-            lista.Remover(new ContaCorrente(1, 456));
-            lista.imprimeLista();
-            //lista.Adicionar(new ContaCorrente(2, 789));
-            //lista.Adicionar(new ContaCorrente(1, 123));
-            //lista.Adicionar(new ContaCorrente(1, 456));
-            //lista.Adicionar(new ContaCorrente(1, 789));
-            //lista.Adicionar(new ContaCorrente(2, 123));
-            //lista.Adicionar(new ContaCorrente(2, 456));
-            //lista.Adicionar(new ContaCorrente(2, 789));
-            //lista.Adicionar(new ContaCorrente(1, 123));
-            //lista.Adicionar(new ContaCorrente(1, 456));
-            //lista.Adicionar(new ContaCorrente(1, 789));
-            //lista.Adicionar(new ContaCorrente(2, 123));
-            //lista.Adicionar(new ContaCorrente(2, 456));
-            //lista.Adicionar(new ContaCorrente(2, 789));
+            for (int i = 0; i < lista.Tamanho; i++)
+            {
+                Console.WriteLine(lista[i]);
+            }
 
             Console.ReadLine();
         }
