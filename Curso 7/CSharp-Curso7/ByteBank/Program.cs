@@ -10,6 +10,37 @@ namespace ByteBank
     {
         static void Main(string[] args)
         {
+            Lista<int> lista = new Lista<int>();
+
+            lista.AdicionarVarios(16, 63, 52, 94);
+            lista.Remover(63);
+
+            Lista<string> cursos = new Lista<string>();
+            cursos.AdicionarVarios("C# Parte 1", "C# Parte 2", "C# Parte 3");
+
+            Lista<ContaCorrente> contas = new Lista<ContaCorrente>();
+            contas.AdicionarVarios(new ContaCorrente(124, 54354), new ContaCorrente(201, 44354));
+
+            for (int i = 0; i < lista.Tamanho; i++)
+            {
+                Console.WriteLine(lista[i]);
+            }
+
+            for (int i = 0; i < contas.Tamanho; i++)
+            {
+                Console.WriteLine(contas[i]);
+            }
+
+            for (int i = 0; i < cursos.Tamanho; i++)
+            {
+                Console.WriteLine(cursos[i]);
+            }
+
+            Console.ReadLine();
+        }
+
+        static void TestaListaDeContaCorrente()
+        {
             ListaDeContaCorrente lista = new ListaDeContaCorrente(2);
 
             lista.AdicionarVarios(
@@ -20,15 +51,13 @@ namespace ByteBank
                 new ContaCorrente(2, 456)
             );
             ContaCorrente conta = lista[3];
-            
+
             lista.Remover(conta);
 
             for (int i = 0; i < lista.Tamanho; i++)
             {
                 Console.WriteLine(lista[i]);
             }
-
-            Console.ReadLine();
         }
 
         static void TestaArrayInt()
