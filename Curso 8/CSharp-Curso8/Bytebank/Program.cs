@@ -19,10 +19,9 @@ namespace Bytebank
                 new ContaCorrente(3,1000)
             };
 
-            var contasOrdenadas = contas.OrderBy(conta => {
-                if (conta == null)
-                    return int.MaxValue;
-                return conta.Agencia; });
+            var contasOrdenadas = contas
+                .Where(conta => conta != null)
+                .OrderBy(conta => conta.Agencia);
 
             foreach (var conta in contasOrdenadas)
             {
