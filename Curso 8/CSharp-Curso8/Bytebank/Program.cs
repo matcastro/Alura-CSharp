@@ -14,24 +14,20 @@ namespace Bytebank
             var contas = new List<ContaCorrente>()
             {
                 new ContaCorrente(213,543),
+                null,
                 new ContaCorrente(147,245),
                 new ContaCorrente(3,1000)
             };
 
-            contas.Sort();
+            var contasOrdenadas = contas.OrderBy(conta => {
+                if (conta == null)
+                    return int.MaxValue;
+                return conta.Agencia; });
 
-            foreach (var conta in contas)
+            foreach (var conta in contasOrdenadas)
             {
                 Console.WriteLine(conta);
             }
-
-            contas.Sort(new ComparadorContaCorrentePorAgencia());
-
-            foreach (var conta in contas)
-            {
-                Console.WriteLine(conta);
-            }
-
             Console.ReadLine();
         }
         
