@@ -1,0 +1,7 @@
+C:\git\Alura-CSharp\Curso 8\CSharp-Curso8\Bytebank\bin\Debug\Bytebank.exe.config
+C:\git\Alura-CSharp\Curso 8\CSharp-Curso8\Bytebank\bin\Debug\Bytebank.exe
+C:\git\Alura-CSharp\Curso 8\CSharp-Curso8\Bytebank\bin\Debug\Bytebank.pdb
+C:\git\Alura-CSharp\Curso 8\CSharp-Curso8\Bytebank\obj\Debug\Bytebank.csprojAssemblyReference.cache
+C:\git\Alura-CSharp\Curso 8\CSharp-Curso8\Bytebank\obj\Debug\Bytebank.csproj.CoreCompileInputs.cache
+C:\git\Alura-CSharp\Curso 8\CSharp-Curso8\Bytebank\obj\Debug\Bytebank.exe
+C:\git\Alura-CSharp\Curso 8\CSharp-Curso8\Bytebank\obj\Debug\Bytebank.pdb
