@@ -11,6 +11,32 @@ namespace Bytebank
     {
         static void Main(string[] args)
         {
+            var contas = new List<ContaCorrente>()
+            {
+                new ContaCorrente(213,543),
+                new ContaCorrente(147,245),
+                new ContaCorrente(3,1000)
+            };
+
+            contas.Sort();
+
+            foreach (var conta in contas)
+            {
+                Console.WriteLine(conta);
+            }
+
+            contas.Sort(new ComparadorContaCorrentePorAgencia());
+
+            foreach (var conta in contas)
+            {
+                Console.WriteLine(conta);
+            }
+
+            Console.ReadLine();
+        }
+        
+        static void TestaSort()
+        {
             var idades = new List<int>();
 
             idades.AdicionarVarios(16, 63, 52, 94);
@@ -34,8 +60,6 @@ namespace Bytebank
             {
                 Console.WriteLine(nome);
             }
-
-            Console.ReadLine();
         }
     }
 }
