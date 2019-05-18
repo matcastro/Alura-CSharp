@@ -14,11 +14,62 @@ namespace ByteBankImportacaoExportacao
         {
             var arquivo = "contas.txt";
 
-            CriarArquivo();
+            TestaLeituraBinaria();
 
             Console.ReadLine();
         }
 
+        static void TestaLeituraBinaria()
+        {
+            var caminhoArquivo = "teste.txt";
+            using (var fluxoDoArquivo = new FileStream(caminhoArquivo, FileMode.Open))
+            using (var leitor = new BinaryReader(fluxoDoArquivo))
+            {
+                Console.WriteLine(leitor.ReadInt32());
+                Console.WriteLine(leitor.ReadInt32());
+                Console.WriteLine(leitor.ReadDouble());
+                Console.WriteLine(leitor.ReadString());
+            }
+        }
+        static void TestaEscritaBinaria()
+        {
+            var caminhoArquivo = "teste.txt";
+            using (var fluxoDoArquivo = new FileStream(caminhoArquivo, FileMode.Create))
+            using (var escritor = new BinaryWriter(fluxoDoArquivo))
+            {
+                escritor.Write(456);
+                escritor.Write(5645646);
+                escritor.Write(4000.50);
+                escritor.Write("Teste teste");
+            }
+        }
+
+        static void TestaEscrita()
+        {
+            var caminhoArquivo = "teste.txt";
+            using (var fluxoDoArquivo = new FileStream(caminhoArquivo, FileMode.Create))
+            using (var escritor = new StreamWriter(fluxoDoArquivo))
+            {
+                for (int i = 0; i < 10000; i++)
+                {
+                    escritor.WriteLine($"Linha {i}");
+                    escritor.Flush();
+                    Console.WriteLine($"Linha {i}");
+                    Console.ReadLine();
+                }
+            }
+        }
+
+        static void CriarArquivo()
+        {
+            var caminhoNovoArquivo = "contasExportadas.csv";
+            using (var fluxoDoArquivo = new FileStream(caminhoNovoArquivo, FileMode.Create))
+            using (var escritor = new StreamWriter(fluxoDoArquivo, Encoding.UTF8))
+            {
+                var contaComoString = "375,4644,2483.13,Jonatan Test";
+                escritor.WriteLine(contaComoString);
+            }
+        }
         static void LerContasDeArquivo(string arquivo)
         {
             using (var fluxoDoArquivo = new FileStream(arquivo, FileMode.Open))
@@ -31,23 +82,13 @@ namespace ByteBankImportacaoExportacao
             }
         }
 
-        static void CriarArquivo()
-        {
-            var caminhoNovoArquivo = "contasExportadas.csv";
-            using (var fluxoDoArquivo = new FileStream(caminhoNovoArquivo, FileMode.Create))
-            using(var escritor = new StreamWriter(fluxoDoArquivo, Encoding.UTF8))
-            {
-                var contaComoString = "375,4644,2483.13,Jonatan Test";
-                escritor.WriteLine(contaComoString);
-            }
-        }
 
         static ContaCorrente ConverterStringParaContaCorrente(string linha)
         {
             string[] campos = linha.Split(',');
             var agencia = campos[0];
             var numero = campos[1];
-            var saldo = campos[2].Replace('.',',');
+            var saldo = campos[2].Replace('.', ',');
             var nome = campos[3];
 
             var conta = new ContaCorrente(int.Parse(agencia), int.Parse(numero));
