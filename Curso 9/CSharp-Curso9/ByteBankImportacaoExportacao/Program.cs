@@ -12,13 +12,33 @@ namespace ByteBankImportacaoExportacao
     {
         static void Main(string[] args)
         {
-            var arquivo = "contas.txt";
+            File.WriteAllText("escrevendoComAClasseFile.txt", "Testando File.WriteAllText");
+            Console.WriteLine("Arquivo escrevendoComAClasseFile.txt criado!");
 
-            TestaLeituraBinaria();
+            var bytesArquivo = File.ReadAllBytes("contas.txt");
+            Console.WriteLine($"Arquivo contas.txt possui {bytesArquivo.Length} bytes");
+
+            var linhas = File.ReadAllLines("contas.txt");
+            Console.WriteLine(linhas.Length);
 
             Console.ReadLine();
         }
 
+        static void TestaStreamDoConsole()
+        {
+            using (var fluxoDoArquivo = new FileStream("entradaConsole.txt", FileMode.Create))
+            using (var escritor = new StreamWriter(fluxoDoArquivo))
+            {
+                var buffer = new byte[1024];
+                while (true)
+                {
+                    Console.WriteLine("Escreva seu nome:");
+                    var nome = Console.ReadLine();
+                    escritor.WriteLine(nome);
+                    escritor.Flush();
+                }
+            }
+        }
         static void TestaLeituraBinaria()
         {
             var caminhoArquivo = "teste.txt";
@@ -70,8 +90,9 @@ namespace ByteBankImportacaoExportacao
                 escritor.WriteLine(contaComoString);
             }
         }
-        static void LerContasDeArquivo(string arquivo)
+        static void LerContasDeArquivo()
         {
+            var arquivo = "contas.txt";
             using (var fluxoDoArquivo = new FileStream(arquivo, FileMode.Open))
             using (var leitor = new StreamReader(fluxoDoArquivo))
             {
