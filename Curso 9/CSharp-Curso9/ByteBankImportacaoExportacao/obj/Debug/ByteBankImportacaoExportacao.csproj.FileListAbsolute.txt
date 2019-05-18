@@ -1,0 +1,7 @@
+C:\git\Alura-CSharp\Curso 9\CSharp-Curso9\ByteBankImportacaoExportacao\bin\Debug\ByteBankImportacaoExportacao.exe.config
+C:\git\Alura-CSharp\Curso 9\CSharp-Curso9\ByteBankImportacaoExportacao\bin\Debug\ByteBankImportacaoExportacao.exe
+C:\git\Alura-CSharp\Curso 9\CSharp-Curso9\ByteBankImportacaoExportacao\bin\Debug\ByteBankImportacaoExportacao.pdb
+C:\git\Alura-CSharp\Curso 9\CSharp-Curso9\ByteBankImportacaoExportacao\obj\Debug\ByteBankImportacaoExportacao.csprojAssemblyReference.cache
+C:\git\Alura-CSharp\Curso 9\CSharp-Curso9\ByteBankImportacaoExportacao\obj\Debug\ByteBankImportacaoExportacao.csproj.CoreCompileInputs.cache
+C:\git\Alura-CSharp\Curso 9\CSharp-Curso9\ByteBankImportacaoExportacao\obj\Debug\ByteBankImportacaoExportacao.exe
+C:\git\Alura-CSharp\Curso 9\CSharp-Curso9\ByteBankImportacaoExportacao\obj\Debug\ByteBankImportacaoExportacao.pdb
