@@ -6,31 +6,30 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ByteBankImportacaoExportacao 
-{ 
-    class Program 
-    { 
-        static void Main(string[] args) 
+namespace ByteBankImportacaoExportacao
+{
+    class Program
+    {
+        static void Main(string[] args)
         {
             var arquivo = "contas.txt";
-            var fluxoDoArquivo = new FileStream(arquivo, FileMode.Open);
-            var buffer = new byte[1024];
-            var bytesLidos = -1;
-
-            while(bytesLidos != 0)
+            using (var fluxoDoArquivo = new FileStream(arquivo, FileMode.Open))
+            using (var leitor = new StreamReader(fluxoDoArquivo))
             {
-                bytesLidos = fluxoDoArquivo.Read(buffer, 0, 1024);
-                EscreverBuffer(buffer);
+                while (!leitor.EndOfStream)
+                {
+                    Console.WriteLine(leitor.Read());
+                }
             }
+
             Console.ReadLine();
         }
 
-        static void EscreverBuffer(byte[] buffer)
+        static void EscreverBuffer(byte[] buffer, int qtdBytes)
         {
             var enconding = Encoding.UTF8;
-            var texto = enconding.GetString(buffer);
+            var texto = enconding.GetString(buffer, 0, qtdBytes);
             Console.Write(texto);
         }
     }
-} 
- 
+}
